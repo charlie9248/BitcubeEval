@@ -1,0 +1,10 @@
+C:\Users\tshepo\source\repos\Assessment Project_P1\MVCDatabase\bin\Debug\MVCDatabase.dacpac
+C:\Users\tshepo\source\repos\Assessment Project_P1\MVCDatabase\bin\Debug\MVCDatabase.dll
+C:\Users\tshepo\source\repos\Assessment Project_P1\MVCDatabase\bin\Debug\MVCDatabase.pdb
+C:\Users\tshepo\source\repos\Assessment Project_P1\MVCDatabase\obj\Debug\MVCDatabase.sqlprojAssemblyReference.cache
+C:\Users\tshepo\source\repos\Assessment Project_P1\MVCDatabase\obj\Debug\Model.xml
+C:\Users\tshepo\source\repos\Assessment Project_P1\MVCDatabase\obj\Debug\refactor.xml
+C:\Users\tshepo\source\repos\Assessment Project_P1\MVCDatabase\obj\Debug\postdeploy.sql
+C:\Users\tshepo\source\repos\Assessment Project_P1\MVCDatabase\obj\Debug\predeploy.sql
+C:\Users\tshepo\source\repos\Assessment Project_P1\MVCDatabase\obj\Debug\MVCDatabase.dll
+C:\Users\tshepo\source\repos\Assessment Project_P1\MVCDatabase\obj\Debug\MVCDatabase.pdb

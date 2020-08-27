@@ -1,0 +1,13 @@
+﻿CREATE TABLE [dbo].[Student]
+(
+	[StudentId] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Forenames] NVARCHAR(50) NOT NULL, 
+    [Surname] VARBINARY(50) NOT NULL, 
+    [Email] VARCHAR(50) NOT NULL, 
+    [DOB] DATETIME NOT NULL, 
+    [Firstname] VARCHAR(50) NOT NULL, 
+    [Fullname] VARBINARY(50) NOT NULL, 
+    [DegreeId] INT NOT NULL ,
+	CONSTRAINT [PK_DegreeId] PRIMARY KEY CLUSTERED ([DegreeId] ASC)
+ ) ON [PRIMARY]
+

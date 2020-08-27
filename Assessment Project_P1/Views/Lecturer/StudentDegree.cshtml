@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Assessment_Project_P1.Models.Degree>
+
+@{
+    ViewBag.Title = "StudentDegree";
+}
+
+<h2>StudentDegree</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LectureFullName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Duration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LectureFullName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DegreeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DegreeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DegreeId })
+        </td>
+    </tr>
+}
+
+</table>

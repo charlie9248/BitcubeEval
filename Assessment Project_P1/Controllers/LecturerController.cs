@@ -10,17 +10,23 @@ namespace Assessment_Project_P1.Controllers
     public class LecturerController : Controller
     {
         // GET: Lecturer
-        public ActionResult Index()
+       
+        
+        public ActionResult ListOfStudent()
         {
+            return View(StudentDb.studList);
+        }
 
-   
-            return View();
+        public ActionResult ListOfDegrees()
+        {
+            return View(DegreeDba.DegreeList);
         }
 
         // GET: Lecturer/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            return View();
+            var filter = DegreeDba.DegreeList.Where(x => x.Courses.Any(a => a.DegreeId == id)).ToList();
+            return View(filter[0].Courses.Where(x => x.DegreeId == id).ToList());
         }
 
         // GET: Lecturer/Create
@@ -31,19 +37,23 @@ namespace Assessment_Project_P1.Controllers
 
         // POST: Lecturer/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Student student)
         {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
                 return View();
-            }
         }
+
+
+
+        public ActionResult StudentDegree(int id)
+        {
+            var studDegree = DegreeDba.DegreeList.Where(x => x.Courses.Any(a => a.DegreeId == id)).ToList();
+            return View(studDegree);
+        }
+
+
+
+
+
 
         // GET: Lecturer/Edit/5
         public ActionResult Edit(int id)
@@ -51,42 +61,8 @@ namespace Assessment_Project_P1.Controllers
             return View();
         }
 
-        // POST: Lecturer/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
+  
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Lecturer/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Lecturer/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+ 
     }
 }

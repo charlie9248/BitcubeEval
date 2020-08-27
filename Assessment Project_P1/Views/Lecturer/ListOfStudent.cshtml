@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Assessment_Project_P1.Models.Student>
+
+@{
+    ViewBag.Title = "ListOfStudent";
+}
+
+<h2>List Of Student</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Forenames)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+    
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Forenames)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOB)
+        </td>
+    
+        <td>
+           
+            @Html.ActionLink("Degree", "StudentDegree", new { id=item.DegreeId } , new { @class = "btn btn-secondary" }) 
+         
+        </td>
+    </tr>
+}
+
+</table>

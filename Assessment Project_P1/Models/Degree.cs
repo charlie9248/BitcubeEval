@@ -8,7 +8,7 @@ namespace Assessment_Project_P1.Models
     public class Degree : Institution
     {
         public int DegreeId { get; set; }
-        public Lecturer LectureFullName { get; set; }
+        public string LectureFullName { get; set; }
        
     }
 }

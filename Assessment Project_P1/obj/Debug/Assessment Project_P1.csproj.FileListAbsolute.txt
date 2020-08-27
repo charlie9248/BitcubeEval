@@ -73,3 +73,4 @@ C:\Users\tshepo\source\repos\Assessment Project_P1\Assessment Project_P1\obj\Deb
 C:\Users\tshepo\source\repos\Assessment Project_P1\Assessment Project_P1\obj\Debug\Assessment Project_P1.csproj.CopyComplete
 C:\Users\tshepo\source\repos\Assessment Project_P1\Assessment Project_P1\obj\Debug\Assessment Project_P1.dll
 C:\Users\tshepo\source\repos\Assessment Project_P1\Assessment Project_P1\obj\Debug\Assessment Project_P1.pdb
+C:\Users\tshepo\source\repos\Assessment Project_P1\Assessment Project_P1\obj\Debug\Assessment Project_P1.csprojAssemblyReference.cache
