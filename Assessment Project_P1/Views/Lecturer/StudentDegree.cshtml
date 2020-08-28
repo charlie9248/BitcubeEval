@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Assessment_Project_P1.Models.Degree>
 
 @{
-    ViewBag.Title = "StudentDegree";
+    ViewBag.Title = "Student Degree";
 }
 
 <h2>StudentDegree</h2>
@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.LectureFullName)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.DegreeId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.DegreeId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DegreeId })
+       
+            @Html.ActionLink("Courses", "Details", new { id=item.DegreeId } , new { @class = "btn btn-success" }) 
+           
         </td>
     </tr>
 }

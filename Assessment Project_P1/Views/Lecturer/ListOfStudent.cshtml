@@ -43,9 +43,10 @@
         </td>
     
         <td>
-           
-            @Html.ActionLink("Degree", "StudentDegree", new { id=item.DegreeId } , new { @class = "btn btn-secondary" }) 
-         
+
+            @Html.ActionLink("Degree", "StudentDegree", new { id = item.DegreeId }, new { @class = "btn btn-secondary" })
+            @Html.ActionLink("Delete", "RemovestudentToDegree", new { id = item.StudentId }, new { @class = "btn btn-danger" })
+
         </td>
     </tr>
 }

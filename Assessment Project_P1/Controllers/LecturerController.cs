@@ -50,19 +50,50 @@ namespace Assessment_Project_P1.Controllers
             return View(studDegree);
         }
 
+        public ActionResult AddstudentToDegree() {
 
-
-
-
-
-        // GET: Lecturer/Edit/5
-        public ActionResult Edit(int id)
-        {
+            ViewBag.availableDegree = DegreeDba.DegreeList.Where(x => x.DegreeId != 0);
             return View();
         }
 
-  
+        [HttpPost]
+        public ActionResult AddstudentToDegree(Student student)
+        {
+            student.StudentId = StudentDb.studList.Count() + 1;
+            if (student.DegreeId != 0 && student.DOB != null && student.Email != "" && student.Surname != "" && student.Forenames != "") {
 
- 
+                StudentDb.studList.Add(student);
+
+                return RedirectToAction("ListOfStudent");
+            }
+             ViewBag.availableDegree = DegreeDba.DegreeList.Where(x => x.DegreeId != 0);
+            return View();
+        }
+
+
+        public ActionResult RemovestudentToDegree(int id )
+        {
+
+
+            //StudentDb.studList.RemoveAt(student.StudentId);
+            StudentDb.studList.RemoveAll(x => x.StudentId == id);
+
+            return RedirectToAction("ListOfStudent");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
